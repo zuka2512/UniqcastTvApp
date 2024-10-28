@@ -1,0 +1,43 @@
+.movie-details-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.movie-details-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 20vw;
+}
+
+.movie-poster {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.movie-details-info h1 {
+  font-size: 1.8em;
+  margin: 10px 0;
+}
+
+.movie-details-info p {
+  font-size: 1em;
+  line-height: 1.4;
+  color: #e0e0e0;
+}
+
+.movie-player {
+  flex: 1;
+  overflow: hidden;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

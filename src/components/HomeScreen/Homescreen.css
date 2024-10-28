@@ -1,0 +1,71 @@
+.home-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Glavni kontejner za MovieRail */
+.movie-rail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Animacija za fade efekt kod promjene teksta */
+.fade-text h1,
+.fade-text p {
+  animation: fadeInOutText 0.4s ease-in-out;
+}
+
+@keyframes fadeInOutText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade efekt pri promjeni kategorija */
+.fade-category {
+  animation: fadeCategoryInOut 0.4s ease-in-out;
+}
+
+@keyframes fadeCategoryInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie-info {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .movie-info h1 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .movie-info p {
+    font-size: 1em;
+    margin: 0;
+    line-height: 1.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 100px;
+  }

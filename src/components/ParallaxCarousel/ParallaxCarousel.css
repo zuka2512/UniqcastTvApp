@@ -1,0 +1,42 @@
+.fixed-focus-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.carousel-container {
+  max-width: 96vw; /* Ograničava širinu na širinu prozora */
+  overflow: hidden; /* Sakriva sve izvan okvira */
+  position: relative;
+}
+
+.slick-list {
+  overflow: hidden;
+  max-width: 100%; /* Osigurava prikaz unutar prozora */
+  max-height: 300px;
+}
+
+.slick-track {
+  display: flex;
+  max-height: 300px;
+}
+
+.carousel-item {
+  padding: 10px;
+  opacity: 0.6;
+}
+
+.carousel-item.focused {
+  opacity: 1;
+  transform: scale(1.1); /* Efekt zumiranja fokusiranog elementa */
+}
+
+.carousel-item img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
