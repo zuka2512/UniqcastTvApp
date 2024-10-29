@@ -55,11 +55,15 @@
     padding: 20px;
     transition: transform 0.4s ease-in-out;
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .movie-info h1 {
     font-size: 2em;
     margin: 0;
+    width: 85vw;
   }
   
   .movie-info p {
