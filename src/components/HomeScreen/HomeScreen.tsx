@@ -36,7 +36,7 @@ const HomeScreen = () => {
   };
 
   const handleNavigation = async (navigationFn: () => void) => {
-    if (!isAnimating) {
+    if (isAnimating === false) {
       setIsAnimating(true);
       navigationFn();
       await waitForAnimation();
@@ -87,27 +87,23 @@ const HomeScreen = () => {
     else if (e.key === 'Backspace') navigate(-1);
   };
 
+  const handleOnMovieFocus = (title: string, description: string, imdbID: string) => {
+    setCurrentMovieTitle(title);
+    setCurrentMovieDescription(description);
+    setCurrentMovieID(imdbID);
+  }
+
   return (
-    <div
-      className="home-screen"
-      ref={homeScreenRef}
-      tabIndex={0}
-      onKeyDown={handleKeyDown}
-    >
+    <div className="home-screen" ref={homeScreenRef} tabIndex={0} onKeyDown={handleKeyDown}>
       <div className={`movie-info fade-text`} key={currentMovieID}>
         <h1>{currentMovieTitle}</h1>
         <p>{currentMovieDescription}</p>
       </div>
-
       <div className={`movie-rail-container ${isCategoryChanging ? 'fade-category' : ''}`}>
         <MovieRail
           category={rails[activeRailIndex]}
           selectedMovieIndex={selectedMovieIndex}
-          onMovieFocus={(title: string, description: string, imdbID: string) => {
-            setCurrentMovieTitle(title);
-            setCurrentMovieDescription(description);
-            setCurrentMovieID(imdbID);
-          }}
+          onMovieFocus={handleOnMovieFocus}
         />
         {activeRailIndex < rails.length - 1 && (
           <MovieRail
