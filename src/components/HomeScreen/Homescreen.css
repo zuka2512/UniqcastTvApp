@@ -7,7 +7,6 @@
   position: relative;
 }
 
-/* Glavni kontejner za MovieRail */
 .movie-rail-container {
   display: flex;
   flex-direction: column;
@@ -15,7 +14,6 @@
   transition: transform 0.4s ease-in-out;
 }
 
-/* Animacija za fade efekt kod promjene teksta */
 .fade-text h1,
 .fade-text p {
   animation: fadeInOutText 0.4s ease-in-out;
@@ -32,7 +30,6 @@
   }
 }
 
-/* Fade efekt pri promjeni kategorija */
 .fade-category {
   animation: fadeCategoryInOut 0.4s ease-in-out;
 }

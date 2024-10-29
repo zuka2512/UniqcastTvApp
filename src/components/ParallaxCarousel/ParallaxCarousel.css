@@ -8,14 +8,14 @@
 }
 
 .carousel-container {
-  max-width: 96vw; /* Ograničava širinu na širinu prozora */
-  overflow: hidden; /* Sakriva sve izvan okvira */
+  max-width: 96vw;
+  overflow: hidden;
   position: relative;
 }
 
 .slick-list {
   overflow: hidden;
-  max-width: 100%; /* Osigurava prikaz unutar prozora */
+  max-width: 100%;
   max-height: 300px;
 }
 
@@ -31,7 +31,7 @@
 
 .carousel-item.focused {
   opacity: 1;
-  transform: scale(1.1); /* Efekt zumiranja fokusiranog elementa */
+  transform: scale(1.1);
 }
 
 .carousel-item img {

@@ -43,7 +43,7 @@ const ParallaxCarouselComponent: React.FC<ParallaxCarouselProps> = ({
             className={`carousel-item ${index === selectedMovieIndex ? 'focused' : ''}`}
           >
             <img
-              src={movie.Poster !== 'N/A' ? movie.Poster : '/path-to-placeholder-image.jpg'}
+              src={movie.Poster !== 'N/A' ? movie.Poster : process.env.PUBLIC_URL + '/placeholder-image.jpg'}
               alt={movie.Title}
             />
           </div>
