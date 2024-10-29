@@ -68,5 +68,5 @@
     line-height: 1.4em;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-height: 100px;
+    min-height: 15vh;
   }
