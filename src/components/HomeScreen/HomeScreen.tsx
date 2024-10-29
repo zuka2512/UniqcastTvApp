@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MovieRail from '../MovieRail/MovieRail';
-import { movieCount, animationDuration } from '../../config';
+import { movieCount, animationDuration, rails } from '../../config';
 import './Homescreen.css';
 
 const HomeScreen = () => {
-  const rails = ['Action', 'Comedy', 'Drama', 'Sci-Fi', 'Horror'];
   const [activeRailIndex, setActiveRailIndex] = useState(0);
   const [selectedMovieIndex, setSelectedMovieIndex] = useState(0);
   const [currentMovieTitle, setCurrentMovieTitle] = useState('');
@@ -32,7 +31,7 @@ const HomeScreen = () => {
         setIsAnimating(false);
         setIsCategoryChanging(false);
         resolve();
-      }, animationDuration);
+      }, animationDuration * 1.1);
     });
   };
 
